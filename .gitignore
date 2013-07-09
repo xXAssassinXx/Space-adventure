@@ -1,0 +1,271 @@
+#include <iostream>
+  using namespace std;
+
+
+    int main()
+	{
+
+
+
+
+	int areaChoice1, direction;
+	string coin;
+
+
+
+
+	int strength = 10, fortune = 10, information = 10, agil = 10, hp = 25;
+
+
+
+
+	int z1HP = 5, z2HP = 8;
+	string attChoice, attChoice2;
+
+
+	cout << "\t\t\t*__________________________*\n"
+	     << "\t\t\t      Level 1:The Arrival    \n"
+	     << "\t\t\t*__________________________*\n\n\n\n"
+
+
+	     << "After a long night of flying, you encounter a spacetown. The town appears\n"
+	     << " to be quiet and there is no sign of those terrible creatures. You need\n"
+	     << " to search the town for other spaceparts . If you find other \n"
+	     << " people they can help you out. There is stength in numbers when serching for tools.\n\n";
+
+
+	     do{
+       cout<< " Where would you like to search? (It is reccomended to search each area)\n"
+	            << "1 -  Market\n"
+	            << "2 - space Station\n"
+	            << "3 - space Cafe\n"
+	            << "4 - Electronic store\n"
+	            << "5 - I have had enough searching, i want to leave the space town\n\n"
+
+
+	            << "Please enter either 1,2,3,4 or 5\n\n";
+	        cin >>areaChoice1;
+	        cout << "\n";
+
+
+	    switch (areaChoice1){
+	        case 1:
+	               cout << "You enter through the large laser doors, revealing a \n"
+	                    << "market. After gourging on a few snacks, you notice a terra \n"
+	                    << "coin on the floor by the doorway.\n\n"
+
+
+	                    << "Would you like to pick the coin up?\n\n";
+	                    cin >> coin;
+	                    cout << "\n";
+	                    if (coin == "yes")
+	                    {
+	                    fortune += 2;
+	                       cout <<"You pick up the coin, it has the words 'Death Coin' engraved on the side of it.\n"
+	                            <<"Your fortune skill has increased and is now " << fortune << "\n\n";
+	                    }
+	                    else
+	                    {
+	                       cout << "You choose to ignore the terra coin and exit the shop\n\n";
+	                       }
+
+
+	               break;
+	        case 2:
+	               cout << "You are surrounded by aliens  and cans of goo.\n"
+	                    << "this isnt your lucky day. However, you dont find trouble. You exit the station hastily\n\n";
+
+
+	               break;
+	        case 3:
+	               strength += 5;
+	               fortune += 5;
+	               information += 5;
+	               agil += 5;
+
+
+	               cout << "You enter the space cafe and see a strange shadow in the right-hand\n"
+	                    << " corner. You mutter the word 'h-h-hello....?' There is no reply. All of \n"
+	                    << "a sudden you hear the sound of a ray gun charging. The shadow comes forth and you\n"
+	                    << " see the face of a young woman. 'Oh my god! I thought you were one of them!' \n"
+	                    << "shouts the young woman. As you talk with her, you learn that there is an alien \n"
+	                    << "outpost to the north in a town called 'human Falls'. The young woman's name is \n"
+	                    << "Jill, and she joins your party. Now that you have a  member, your\n."
+	                    << "stats will increase\n\n"
+	                    << "Your stats are now: \n\n"
+	                    << strength << " Strength\n"
+	                    << fortune << " fortune\n"
+	                    << information << " Intelligence\n"
+	                    << agil << " Agility\n\n";
+
+
+	               break;
+	        case 4:
+	               cout << "After searching the electronic store, all you can find is computer chips and equipment, nothing\n"
+	                    << "of use as you already have enough equipment as it is.\n\n";
+	               break;
+	       case 5:
+	               cout << "You make haste towards the northern area, heading towards the alien outpost\n"
+	                    << "with your new found friend\n\n";
+	        default:
+	               cout << "Incorrect entry.\n";
+	        }
+	    }while (areaChoice1 !=5);
+
+
+	               cout << "As you begin to leave the town, you hear faint moaning sounds\n"
+	                    << "in the distance. All of a sudden Jill shouts 'Look! Behind us!'\n"
+	                    << "The horde of  aliens staggers towards the both of you. What would\n"
+	                    << "you like to do? Run or Attack? (Please enter 'run' or 'attack')\n\n";
+	               cout << "mutant HP: " << z1HP << "     Your HP: " << hp << "\n\n";
+
+
+	                    cin >> attChoice;
+
+
+	                    if (attChoice == "run")
+	                    {
+	                       if (agil > 12)
+	                          {
+	                               cout << "You escape";
+	                          }
+	                       else
+	                          {
+	                               cout << "No running from here";
+	                          }
+	                    }
+	                    else
+	                        {
+	                          cout << "\t\t\t*__________________________*\n"
+	                               << "\t\t\t      alien Horde Attack     \n"
+	                               << "\t\t\t*__________________________*\n\n\n"
+
+
+	                               << "\nYou attack the alien & do 3 damage\n\n";
+	                          z1HP -= 3;
+	                          cout << "alien horde HP: " << z1HP << "\n\n";
+	                          cout << "The alien horde now attacks you and does 5 damage\n\n";
+	                          hp -= 5;
+	                          cout << "Your HP: " << hp << "\n\n";
+	                          cout << "You attack the alien & do 3 damage\n\n";
+	                          z1HP -= 3;
+	                          cout << "alien horde HP: " << z1HP << "\n\n"
+
+
+	                               << "After a hard fight, you defeat your extraterestial enemy. This \n"
+	                               << "attack caused some damage and you now have " << hp << " HP.\n\n";
+
+
+
+
+	                               do{
+	                          cout << "Now that you and Jill are safe for now, you need to decide\n"
+                              << "which direction you would like to travel:\n\n"
+	                               << "1 - North\n"
+	                               << "2 - South\n"
+	                               << "3 - East\n"
+	                               << "4 - West\n"
+	                               << "Please enter 1,2,3 or 4.\n\n";
+
+
+	                      cin  >> direction;
+
+
+	                               switch (direction){
+	                                      case 1: cout << "You begin to travel north. After a long walk you notice a\n"
+	                                                   << "bright structure in the background. You reach the structure\n"
+	                                                   << "and realise that it is a grave. You can hear voices shouting\n"
+	                                                   << "and asking for help. The grave has seen some dark times and\n"
+	                                                   << "does not look welcoming. However - you cannot ignore the voices.\n"
+	                                                   << "You and Jill open the doors.\n\n"
+	                                                   << "\t\t\t*__________________________*\n"
+	                                                   << "\t\t\t      End of Level 1      \n"
+	                                                   << "\t\t\t*__________________________*\n\n\n\n";
+	                                              break;
+
+
+	                                      case 2: cout << "You begin to travel South. However, you realise that this is\n"
+	                                                   << "the way you originally came from - so you turn back.\n";
+	                                              break;
+
+
+	                                      case 3: cout << "You begin to travel East. However, after a while of travelling\n"
+	                                                   << "you are confronted by more Alien's, you will have to fight this\n"
+	                                                   << "time, so what stance would you like to take? Offensive of defensive?\n\n";
+	                                                   cout << "alien HP: " << z2HP << "     Your HP: " << hp << "\n\n";
+
+
+	                                                   cin >> attChoice2;
+
+
+	                                                   if (attChoice == "offensive")
+	                                                    {
+                                                cout <<"\t\t\t*__________________________*\n"
+	                                                  << "\t\t\t      Alien Horde Attack     \n"
+	                                                  << "\t\t\t*__________________________*\n\n\n"
+
+
+	                                                    << "\nYou attack the alien & do 5 damage\n\n";
+	                                                    z2HP -= 5;
+	                                                    cout << "alien horde HP: " << z2HP << "\n\n";
+	                                                    cout << "The alien horde now attacks you and does 10 damage\n\n";
+	                                                    hp -= 10;
+	                                                    cout << "Your HP: " << hp << "\n\n";
+	                                                    cout << "You attack the alien & do 5 damage\n\n";
+	                                                    z2HP -= 5;
+	                                                    cout << " alien horde HP: " << z2HP << "\n\n"
+
+
+	                                                    << "After the encounter you contine your journey east. You eventually\n"
+	                                                   << " see abright structure in the background. You reach the structure\n"
+	                                                   << "and realise that it is a grave. You can hear voices shouting\n"
+                                                   << "and asking for help. The grave has seen some dark times and\n"
+	                                                   << "does not look welcoming. However - you cannot ignore the voices.\n"
+	                                                   << "You and Jill open the doors.\n\n"
+	                                                   << "\t\t\t*__________________________*\n"
+	                                                   << "\t\t\t      End of Level 1      \n"
+	                                                   << "\t\t\t*__________________________*\n\n\n\n";
+	                                                                  }
+	                                                    else
+	                                                    {
+                                                cout << "\t\t\t*__________________________*\n"
+                                                    << "\t\t\t      Alien Horde Attack     \n"
+                                                    << "\t\t\t*__________________________*\n\n\n"
+
+
+	                                                     << "\nYou attack the alien & do 4 damage\n\n";
+	                                                    z2HP -= 4;
+	                                                    cout << "alien horde HP: " << z2HP << "\n\n";
+	                                                    cout << "The alien horde now attacks you and does 5 damage\n\n";
+	                                                    hp -= 5;
+	                                                    cout << "Your HP: " << hp << "\n\n";
+	                                                    cout << "You attack the alien & do 4 damage\n\n";
+	                                                    z2HP -= 4;
+	                                                    cout << "alien horde HP: " << z2HP << "\n\n"
+	                                                   << "After the encounter you contine your journey east. You eventually\n"
+	                                                   << " see abright structure in the background. You reach the structure\n"
+                                                   << "and realise that it is a grave. You can hear voices shouting\n"
+	                                                   << "and asking for help. The grave has seen some dark times and\n"
+                                                    << "does not look welcoming. However - you cannot ignore the voices.\n"
+                                                << "You and Jill open the doors.\n\n"
+                                                << "\t\t\t*__________________________*\n"
+                                                <<"\t\t\t      End of Level 1      \n"
+                                                << "\t\t\t*__________________________*\n\n\n\n";
+                                                    }
+	                                              break;
+	                                              case 4: cout << "You begin to travel West. However, you realise that there\n"
+	                                              << "is nothing to be found this way apart from a bar and stars\n\n";
+	                                                           break;
+
+
+	                                              default:
+	                                              cout << "Incorrect entry.\n\n";
+	                                              break;
+
+
+	        }
+	    }while (direction != 1 & direction !=3) ;
+                        }
+
+
+
